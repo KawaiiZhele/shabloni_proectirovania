@@ -1,0 +1,20 @@
+﻿<Window x:Class="ThemeDecoratorDemo.MainWindow"
+ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+ Title="Theme Decorator Demo" Height="450" Width="800">
+    <Grid x:Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Button Content="Light Theme" Click="ButtonLightClick" Grid.Row="0"
+HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10"/>
+        <Button Content="Dark Theme" Click="ButtonDarkClick" Grid.Row="1"
+HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10"/>
+        <TextBlock x:Name="TextBlock1" Text="Hello, World!" Grid.Row="2"
+HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock x:Name="TextBlock2" Text="Goodbye, World!" Grid.Row="2"
+HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+    </Grid>
+</Window>

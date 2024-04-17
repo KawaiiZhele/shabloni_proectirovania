@@ -1,0 +1,31 @@
+﻿<Window x:Class="shabl1.MainWindow"
+ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+ xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ mc:Ignorable="d"
+ Title="State Pattern Example" Height="450" Width="800">
+    <Window.Resources>
+        <ControlTemplate x:Key="ButtonTemplate" TargetType="Button">
+            <Border x:Name="border" Background="LightGray" BorderBrush="Gray"
+BorderThickness="1" CornerRadius="5">
+                <ContentPresenter HorizontalAlignment="Center"
+VerticalAlignment="Center"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="border" Property="Background"
+Value="DarkGray"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter TargetName="border" Property="Background"
+Value="DarkRed"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Window.Resources>
+    <Grid>
+        <!-- Пример кнопки с тремя состояниями -->
+        <Button x:Name="MyButton" Content="Click Me" Template="{StaticResource ButtonTemplate}" Width="100" Height="40"/>
+    </Grid>
+</Window>
